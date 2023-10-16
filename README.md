@@ -55,22 +55,22 @@ It takes requests from  `TransactionController`,  collects, processes and return
 ### TransactionRepository
 It helps to access the transaction data persisted in the database. It currently uses a H2 database in memory.
 
-##Exchange Rate Collecting
+## Exchange Rate Collecting
 This part connects with the **Treasury Reporting Rates of Exchange** API and collects the exchange rate information needed. It contains `CurrencyData`, `ExchangeRateController` and `ExchangeRateService`.
 
-###CurrencyData
+### CurrencyData
 This is the data model of the exchange rate data. It contains the information collected from **Treasury Reporting Rates of Exchange**.
 
-###ExchangeRateController
+### ExchangeRateController
 It contains an endpoint which provides the valid currency code in the last year.
 
-###ExchangeRateService
+### ExchangeRateService
 It connects with **Treasury Reporting Rates of Exchange** API and collects the exchange rate information needed.
 
 
-##Swagger UI
+## Swagger UI
 The Swagger Ui is configured in `SwaggerConfig`
 
-##Jacoco Code Coverage
+## Jacoco Code Coverage
 Jacoco code coverage report is configured in `pom.xml` and can be accessed at `.../target/site/jacoco/index.html`
 
