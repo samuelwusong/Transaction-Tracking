@@ -47,7 +47,7 @@ This part creates and display the transaction information. It contains `Transact
 This is the data model of the transaction. It is used to persist the transaction to the database.
 
 ### TransactionController
-It contains a **POST** endpoint and two **GET** ones. It validates the user input and handles the error messages. 
+It contains a **POST** endpoint and two **GET** ones. It validates the user input and handles the error messages. The error messages are externalized in application.properties. 
 
 ### TransactionService
 It takes requests from  `TransactionController`,  collects, processes and returns the data needed.
@@ -74,3 +74,9 @@ The Swagger Ui is configured in `SwaggerConfig`
 ## Jacoco Code Coverage
 Jacoco code coverage report is configured in `pom.xml` and can be accessed at `.../target/site/jacoco/index.html`
 
+# Appendix
+Sample URL to access **Treasury Reporting Rates of Exchange**
+
+* [Collect the valid currency codes](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?fields=country_currency_desc&filter=record_date:gte:2023-01-01,record_date:lte:2023-10-14&page[size]=350)
+
+* [Collect the exchange rate on a currency](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?fields=country_currency_desc,exchange_rate,record_date&filter=country_currency_desc:eq:Canada-Dollar,record_date:gte:2020-01-01,record_date:lte:2023-01-01&sort=-record_date&page[size]=50)
